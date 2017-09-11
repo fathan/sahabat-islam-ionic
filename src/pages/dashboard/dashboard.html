@@ -1,0 +1,129 @@
+<ion-header>
+  <ion-navbar color="si-green-dark">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+      Home
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content>
+  <div>
+    <ion-segment [(ngModel)]="menuDashboard">
+      <ion-segment-button value="home">
+        HOME
+      </ion-segment-button>
+      <ion-segment-button value="dawah">
+        DA'WAH
+      </ion-segment-button>
+      <ion-segment-button value="instagram">
+        INSTAGRAM
+      </ion-segment-button>
+    </ion-segment>
+  </div>
+  <div class="" [ngSwitch]="menuDashboard">
+    <ion-list padding *ngSwitchCase="'home'" ngSelected="selected">
+      <!-- LINK AMMANA FINTECH -->
+      <div class="ammana-fintech-home">
+        <div class="ammana-fintech-home__logo">
+          <img src="../assets/img/logo_ammana.png" alt="">
+          <span>ammana</span>
+        </div>
+        <div class="ammana-fintech-home__content">
+          <div class="title">
+            download ammana fintech
+          </div>
+          <div class="description">
+            <p>LET’S PARTICIPATE IN HELPING FIGHT RIBA & </p>
+            <p>EMPOWERING UMMAH!</p>
+            <p>HELP SMALL ENTREPRENEURS THROUGH</p>
+            <p>SHARIA FINANCING.</p>
+          </div>
+        </div>
+      </div>
+      <!-- /.LINK AMMANA FINTECH -->
+      <!-- PRAYERS TIMES -->
+      <div class="prayer-times-home">
+        <div class="prayer-times-home__heading">
+          <div class="time">
+            8 RAMADHAN 1438 / 3 JUNE 2017
+          </div>
+          <div class="location">
+            JAKARTA, INDONESIA
+          </div>
+        </div>
+        <div class="prayer-times-home__body">
+          <div class="list_prayer">
+            <div class="title">
+              Fajr
+            </div>
+            <div class="time">
+              04:56
+            </div>
+            <div class="type">
+              (WIB)
+            </div>
+          </div>
+          <div class="list_prayer">
+            <div class="title">
+              Zhuhr
+            </div>
+            <div class="time">
+              04:56
+            </div>
+            <div class="type">
+              (WIB)
+            </div>
+          </div>
+          <div class="list_prayer">
+            <div class="title">
+              Asr
+            </div>
+            <div class="time">
+              04:56
+            </div>
+            <div class="type">
+              (WIB)
+            </div>
+          </div>
+          <div class="list_prayer">
+            <div class="title">
+              Maghrib
+            </div>
+            <div class="time">
+              04:56
+            </div>
+            <div class="type">
+              (WIB)
+            </div>
+          </div>
+          <div class="list_prayer">
+            <div class="title">
+              Isha
+            </div>
+            <div class="time">
+              04:56
+            </div>
+            <div class="type">
+              (WIB)
+            </div>
+          </div>
+        </div>
+        <div class="prayer-times-home__set">
+          <a href="">
+            SET TIME
+          </a>
+        </div>
+      </div>
+
+      <!-- /.PRAYERS TIMES -->
+    </ion-list>
+    <ion-list padding *ngSwitchCase="'dawah'">
+      Dawah content
+    </ion-list>
+    <ion-list padding *ngSwitchCase="'instagram'">
+      Instagram content
+    </ion-list>
+  </div>
+</ion-content>

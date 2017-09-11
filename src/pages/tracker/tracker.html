@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-navbar color="si-green-dark">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Ibadah Tracker</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content>
+  <div>
+    <ion-segment [(ngModel)]="menuTracker">
+      <ion-segment-button value="checklist">
+        CHECKLIST
+      </ion-segment-button>
+      <ion-segment-button value="weekly_report">
+        WEEKLY REPORT
+      </ion-segment-button>
+    </ion-segment>
+  </div>
+  <div class="" [ngSwitch]="menuTracker">
+    <ion-list padding *ngSwitchCase="'checklist'" ngSelected="selected">
+      Cheklist content tracker
+    </ion-list>
+    <ion-list padding *ngSwitchCase="'weekly_report'">
+      Weekly Report
+    </ion-list>
+  </div>
+</ion-content>

@@ -1,0 +1,159 @@
+.segment{
+  background-color: #9CD572;
+}
+
+.segment-md{
+  .segment-button{
+    color: #FFFFFF;
+    border-bottom-width: 0px;
+  }
+}
+
+.segment-md .segment-button.activated, .segment-md .segment-button.segment-activated {
+  border-bottom: 4px solid #ffc61b;
+}
+
+img.img-header{
+  width: 50px;
+}
+
+.is--title-logo{
+  font-size: 12px;
+}
+
+.scroll-content{
+  background-color: #E0E0E0;
+}
+
+.menu--sidebar{
+  &__list{
+    color: #757575;
+    background-color: #E0E0E0;
+  }
+}
+
+img.is--img-aside{
+  width: 16px;
+  margin-right: 10px;
+}
+
+// DASHBOARD - AMMANA FINTECH
+.ammana-fintech-home{
+  display: inline-block;
+  width: 100%;
+  background: #FFFFFF;
+  border: 1px solid #dbdbdb;
+  border-radius: 5px;
+  padding: 15px;
+  margin-bottom: 15px;
+
+  &__logo{
+    width: 20%;
+    float: left;
+    text-align: center;
+
+    img{
+      width: 100px;
+      height: auto;
+      margin: auto;
+      display: block;
+    }
+
+    span{
+      font-size: 12px;
+      color: #0D8FCA;
+    }
+  }
+
+  &__content{
+    width: 80%;
+    float: right;
+    padding-left: 10px;
+
+    .title{
+      font-size: 13px;
+      text-transform: uppercase;
+      font-weight: bold;
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    .description{
+      font-size: 10.6px;
+
+      p{
+        margin: 0;
+      }
+    }
+  }
+}
+
+// DASHBOARD - PRAYER TIMES
+.prayer-times-home{
+  display: inline-block;
+  width: 100%;
+  background: #FFFFFF;
+  border: 1px solid #dbdbdb;
+  border-radius: 5px;
+  padding: 15px;
+
+  &__heading{
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+
+    .time{
+      font-size: 18px;
+      color: #000000;
+      font-weight: bold;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+
+    .location{
+      font-size: 18px;
+      color: #000000;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+  }
+
+  &__body{
+    border-top: 1px solid #333333;
+    display: inline-block;
+    width: 100%;
+    margin-top: 10px;
+    padding: 15px 0px;
+
+    .list_prayer{
+      float: left;
+      width: 20%;
+      text-align: center;
+
+      .title{
+        font-size: 16px;
+        color: #000000;
+        margin-bottom: 15px;
+      }
+
+      .time{
+        font-size: 12px;
+        color: #000000;
+      }
+
+      .type{
+        font-size: 12px;
+        color: #000000;
+      }
+    }
+  }
+
+  &__set{
+    text-align: center;
+
+    a{
+      text-decoration: none;
+      font-weight: bold;
+    }
+  }
+}

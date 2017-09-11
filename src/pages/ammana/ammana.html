@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-navbar color="si-green-dark">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Ammana</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content>
+  <div>
+    <ion-segment [(ngModel)]="menuAmmana">
+      <ion-segment-button value="about_us">
+        ABOUT US
+      </ion-segment-button>
+      <ion-segment-button value="powered_by">
+        POWERED BY
+      </ion-segment-button>
+      <ion-segment-button value="donate">
+        DONATE
+      </ion-segment-button>
+    </ion-segment>
+  </div>
+  <div class="" [ngSwitch]="menuAmmana">
+    <ion-list padding *ngSwitchCase="'about_us'" ngSelected="selected">
+      About Us content
+    </ion-list>
+    <ion-list padding *ngSwitchCase="'powered_by'">
+      Powered By content
+    </ion-list>
+    <ion-list padding *ngSwitchCase="'donate'">
+      Donate content
+    </ion-list>
+  </div>
+</ion-content>

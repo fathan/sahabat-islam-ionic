@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-navbar color="si-green-dark">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Al-Quran</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content>
+  <div>
+    <ion-segment [(ngModel)]="menuAlquran">
+      <ion-segment-button value="surah">
+        SURAH
+      </ion-segment-button>
+      <ion-segment-button value="juz">
+        JUZ
+      </ion-segment-button>
+      <ion-segment-button value="bookmark_alquran">
+        BOOKMARK
+      </ion-segment-button>
+    </ion-segment>
+  </div>
+  <div class="" [ngSwitch]="menuAlquran">
+    <ion-list padding *ngSwitchCase="'surah'" ngSelected="selected">
+      <button ion-button color="si-green-dark" (click)="alquranSurahDetail()">
+        Surah Detail
+      </button>
+    </ion-list>
+    <ion-list padding *ngSwitchCase="'juz'">
+      Juz content
+    </ion-list>
+    <ion-list padding *ngSwitchCase="'bookmark_alquran'">
+      Bookmark Alquran content
+    </ion-list>
+  </div>
+</ion-content>
