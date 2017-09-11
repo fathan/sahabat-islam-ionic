@@ -1,16 +1,28 @@
 <ion-header>
   <ion-navbar color="si-green-dark">
     <button ion-button menuToggle>
-      <ion-icon name="menu"></ion-icon>
+      <img src="../assets/img/menu2.png" alt="">
     </button>
-    <ion-title>Da'wah</ion-title>
+    <ion-title>
+      <img class="img-header" src="../assets/img/logo-ammana-small.png" alt="">
+      Da'wah
+    </ion-title>
+    <ion-buttons end>
+      <button (click)="searchInput = !searchInput" ion-button icon-only>
+        <ion-icon name="search"></ion-icon>
+      </button>
+    </ion-buttons>
   </ion-navbar>
 </ion-header>
-<ion-content padding>
-
-</ion-content>
 <ion-content>
   <div>
+    <ion-searchbar
+      *ngIf="searchInput"
+      [(ngModel)]="myInput"
+      [showCancelButton]="shouldShowCancel"
+      (ionInput)="onInput($event)"
+      (ionCancel)="onCancel($event)">
+    </ion-searchbar>
     <ion-segment [(ngModel)]="menuDawah">
       <ion-segment-button value="updates">
         UPDATES
@@ -24,16 +36,91 @@
     </ion-segment>
   </div>
   <div class="" [ngSwitch]="menuDawah">
-    <ion-list padding *ngSwitchCase="'updates'" ngSelected="selected">
-      <button color="si-green-dark" ion-button (click)="dakwahDetail()">
-        Dakwah Detail
-      </button>
+    <ion-list *ngSwitchCase="'updates'" ngSelected="selected">
+      <ion-item (click)="dakwahDetail()">
+        <h3>Shalawat yang istimewa (Logika Doa) - Tausiah di Bank Indonesia</h3>
+        <p>Topik: Muamalah(audio)</p>
+      </ion-item>
+      <ion-item>
+        <h3>Kado Ingat Mati - Part 5</h3>
+        <p>Topik: Muamalah(youtube)</p>
+      </ion-item>
+      <ion-item>
+        <h3>Kado Ingat Mati - Part 4</h3>
+        <p>Topik: Muamalah(youtube)</p>
+      </ion-item>
+      <ion-item>
+        <h3>Kado Ingat Mati - Part 3</h3>
+        <p>Topik: Muamalah(youtube)</p>
+      </ion-item>
+      <ion-item>
+        <h3>Kado Ingat Mati - Part 2</h3>
+        <p>Topik: Muamalah(youtube)</p>
+      </ion-item>
+      <ion-item>
+        <h3>Kado Ingat Mati - Part 1</h3>
+        <p>Topik: Muamalah(youtube)</p>
+      </ion-item>
+      <ion-item>
+        <h3>Wirid 7x Allhuma ajirna mina nar (terjaga dari Api Neraka) Pagi-Petang</h3>
+        <p>Topik: Muamalah(audio)</p>
+      </ion-item>
+      <ion-item>
+        <h3>Kado Ingat Mati - Part 4</h3>
+        <p>Topik: Muamalah(youtube)</p>
+      </ion-item>
+      <ion-item>
+        <h3>Kado Ingat Mati - Part 3</h3>
+        <p>Topik: Muamalah(youtube)</p>
+      </ion-item>
+      <ion-item>
+        <h3>Kado Ingat Mati - Part 2</h3>
+        <p>Topik: Muamalah(youtube)</p>
+      </ion-item>
+      <ion-item>
+        <h3>Kado Ingat Mati - Part 1</h3>
+        <p>Topik: Muamalah(youtube)</p>
+      </ion-item>
+      <ion-item>
+        <h3>Wirid 7x Allhuma ajirna mina nar (terjaga dari Api Neraka) Pagi-Petang</h3>
+        <p>Topik: Muamalah(audio)</p>
+      </ion-item>
     </ion-list>
-    <ion-list padding *ngSwitchCase="'content'">
-      Dawah content
+    <ion-list *ngSwitchCase="'content'">
+      <ion-item (click)="dakwahDetail()">
+        <h3>Shalawat yang istimewa (Logika Doa) - Tausiah di Bank Indonesia</h3>
+        <p>Topik: Muamalah(audio)</p>
+      </ion-item>
+      <ion-item>
+        <h3>Kado Ingat Mati - Part 5</h3>
+        <p>Topik: Muamalah(youtube)</p>
+      </ion-item>
+      <ion-item>
+        <h3>Kado Ingat Mati - Part 4</h3>
+        <p>Topik: Muamalah(youtube)</p>
+      </ion-item>
+      <ion-item>
+        <h3>Kado Ingat Mati - Part 3</h3>
+        <p>Topik: Muamalah(youtube)</p>
+      </ion-item>
+      <ion-item>
+        <h3>Kado Ingat Mati - Part 2</h3>
+        <p>Topik: Muamalah(youtube)</p>
+      </ion-item>
+      <ion-item>
+        <h3>Kado Ingat Mati - Part 1</h3>
+        <p>Topik: Muamalah(youtube)</p>
+      </ion-item>
+      <ion-item>
+        <h3>Wirid 7x Allhuma ajirna mina nar (terjaga dari Api Neraka) Pagi-Petang</h3>
+        <p>Topik: Muamalah(audio)</p>
+      </ion-item>
     </ion-list>
-    <ion-list padding *ngSwitchCase="'bookmark_dawah'">
-      Dawah Bookmark content
+    <ion-list *ngSwitchCase="'bookmark_dawah'">
+      <ion-item (click)="dakwahDetail()">
+        <h3>Shalawat yang istimewa (Logika Doa) - Tausiah di Bank Indonesia</h3>
+        <p>Topik: Muamalah(audio)</p>
+      </ion-item>
     </ion-list>
   </div>
 </ion-content>

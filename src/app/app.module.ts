@@ -9,6 +9,7 @@ import {
 
 import { MyApp } from './app.component';
 
+import { AboutPageModule } from './../pages/about/about.module';
 import { AlquranPageModule } from './../pages/alquran/alquran.module';
 import { AlquranSurahDetailPageModule } from './../pages/alquran-surah-detail/alquran-surah-detail.module';
 import { AmmanaPageModule } from './../pages/ammana/ammana.module';
@@ -30,6 +31,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   ],
   imports: [
     BrowserModule,
+    AboutPageModule,
     AlquranPageModule,
     AlquranSurahDetailPageModule,
     AmmanaPageModule,

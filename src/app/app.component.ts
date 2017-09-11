@@ -10,6 +10,7 @@ import { InstagramPage } from './../pages/instagram/instagram';
 import { DzikrPage } from './../pages/dzikr/dzikr';
 import { DawahPage } from './../pages/dawah/dawah';
 import { AlquranPage } from './../pages/alquran/alquran';
+import { AboutPage } from './../pages/about/about';
 
 @Component({
   templateUrl: 'app.html'
@@ -52,5 +53,9 @@ export class MyApp {
     // Reset the content nav to have just this page
     // we wouldn't want the back button to show in this scenario
     this.nav.setRoot(page.component);
+  }
+
+  openPageDonate() {
+    this.nav.setRoot(AboutPage)
   }
 }

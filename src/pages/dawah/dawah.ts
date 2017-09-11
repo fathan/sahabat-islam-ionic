@@ -13,6 +13,7 @@ import { DawahDetailPage } from './../dawah-detail/dawah-detail';
 })
 export class DawahPage {
   menuDawah: string = 'updates'
+  searchInput: false
 
   constructor(
     public navCtrl: NavController,

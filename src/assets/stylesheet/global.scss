@@ -13,8 +13,16 @@
   border-bottom: 4px solid #ffc61b;
 }
 
+.line--menu{
+  border-top: 1px solid #c9c9c9;
+}
+
+.text-center{
+  text-align: center;
+}
+
 img.img-header{
-  width: 50px;
+  width: 40px;
 }
 
 .is--title-logo{
@@ -23,6 +31,10 @@ img.img-header{
 
 .scroll-content{
   background-color: #E0E0E0;
+}
+
+.bg--white{
+  background-color: #FFFFFF;
 }
 
 .menu--sidebar{
@@ -155,5 +167,16 @@ img.is--img-aside{
       text-decoration: none;
       font-weight: bold;
     }
+  }
+}
+
+.list-surah{
+  .index{
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  .name-surah{
+    font-size: 25px;
   }
 }

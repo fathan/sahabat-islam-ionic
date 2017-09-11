@@ -1,36 +1,98 @@
 <ion-header>
   <ion-navbar color="si-green-dark">
     <button ion-button menuToggle>
-      <ion-icon name="menu"></ion-icon>
+      <img src="../assets/img/menu2.png" alt="">
     </button>
-    <ion-title>Al-Quran</ion-title>
+    <ion-title>
+      <img class="img-header" src="../assets/img/logo-ammana-small.png" alt="">
+      Al-Quran
+    </ion-title>
   </ion-navbar>
 </ion-header>
 <ion-content>
-  <div>
-    <ion-segment [(ngModel)]="menuAlquran">
-      <ion-segment-button value="surah">
-        SURAH
-      </ion-segment-button>
-      <ion-segment-button value="juz">
-        JUZ
-      </ion-segment-button>
-      <ion-segment-button value="bookmark_alquran">
-        BOOKMARK
-      </ion-segment-button>
-    </ion-segment>
-  </div>
-  <div class="" [ngSwitch]="menuAlquran">
-    <ion-list padding *ngSwitchCase="'surah'" ngSelected="selected">
-      <button ion-button color="si-green-dark" (click)="alquranSurahDetail()">
-        Surah Detail
-      </button>
-    </ion-list>
-    <ion-list padding *ngSwitchCase="'juz'">
-      Juz content
-    </ion-list>
-    <ion-list padding *ngSwitchCase="'bookmark_alquran'">
-      Bookmark Alquran content
-    </ion-list>
+  <div class="bg--white">
+    <div>
+      <ion-segment [(ngModel)]="menuAlquran">
+        <ion-segment-button value="surah">
+          SURAH
+        </ion-segment-button>
+        <ion-segment-button value="juz">
+          JUZ
+        </ion-segment-button>
+        <ion-segment-button value="bookmark_alquran">
+          BOOKMARK
+        </ion-segment-button>
+      </ion-segment>
+    </div>
+    <div class="" [ngSwitch]="menuAlquran">
+      <ion-list class="list-surah" *ngSwitchCase="'surah'" ngSelected="selected">
+        <ion-item>
+          <div class="index" item-start>
+            1.
+          </div>
+          <h3>Al-Faatiha</h3>
+          <p>Meccan - 7 Ayat</p>
+          <div class="name-surah" item-end>
+            الفاتحة
+          </div>
+        </ion-item>
+        <ion-item>
+          <div class="index" item-start>
+            2.
+          </div>
+          <h3>Al-Faatiha</h3>
+          <p>Meccan - 7 Ayat</p>
+          <div class="name-surah" item-end>
+            الفاتحة
+          </div>
+        </ion-item>
+        <ion-item>
+          <div class="index" item-start>
+            3.
+          </div>
+          <h3>Al-Faatiha</h3>
+          <p>Meccan - 7 Ayat</p>
+          <div class="name-surah" item-end>
+            الفاتحة
+          </div>
+        </ion-item>
+        <ion-item>
+          <div class="index" item-start>
+            4.
+          </div>
+          <h3>Al-Faatiha</h3>
+          <p>Meccan - 7 Ayat</p>
+          <div class="name-surah" item-end>
+            الفاتحة
+          </div>
+        </ion-item>
+        <ion-item>
+          <div class="index" item-start>
+            5.
+          </div>
+          <h3>Al-Faatiha</h3>
+          <p>Meccan - 7 Ayat</p>
+          <div class="name-surah" item-end>
+            الفاتحة
+          </div>
+        </ion-item>
+        <ion-item>
+          <div class="index" item-start>
+            6.
+          </div>
+          <h3>Al-Faatiha</h3>
+          <p>Meccan - 7 Ayat</p>
+          <div class="name-surah" item-end>
+            الفاتحة
+          </div>
+        </ion-item>
+      </ion-list>
+      <ion-list padding *ngSwitchCase="'juz'">
+        Juz content
+      </ion-list>
+      <ion-list padding *ngSwitchCase="'bookmark_alquran'">
+        Bookmark Alquran content
+      </ion-list>
+    </div>
   </div>
 </ion-content>

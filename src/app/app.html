@@ -1,13 +1,18 @@
 <ion-menu [content]="content">
   <ion-content class="menu--sidebar">
     <ion-list>
+      <button class="menu--sidebar__list" ion-item>
+        MENU
+      </button>
+    </ion-list>
+    <ion-list>
       <button class="menu--sidebar__list" menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
         <img src="{{p.logo}}" alt="" class="is--img-aside">
         {{p.title}}
       </button>
     </ion-list>
     <ion-list>
-      <button class="menu--sidebar__list" ion-item>
+      <button class="menu--sidebar__list line--menu" (click)="openPageDonate()" ion-item>
         <img src="../assets/img/logo-aside/8-aside-donate.png" alt="" class="is--img-aside">
         Donate
       </button>
@@ -15,7 +20,7 @@
         <img src="../assets/img/logo-aside/9-aside-version.png" alt="" class="is--img-aside">
         Version 2.0 (2017)
       </button>
-      <button class="menu--sidebar__list" ion-item>
+      <button class="menu--sidebar__list" (click)="openPageAbout()" ion-item>
         <img src="../assets/img/logo-aside/10-aside-aboutus.png" alt="" class="is--img-aside">
         About Us
       </button>
@@ -23,7 +28,7 @@
         <img src="../assets/img/logo-aside/11-aside-rate-us.png" alt="" class="is--img-aside">
         Rate Us
       </button>
-      <button class="menu--sidebar__list" ion-item>
+      <button class="menu--sidebar__list line--menu" ion-item>
         <img src="../assets/img/logo-aside/12-aside-download.png" alt="" class="is--img-aside">
         Download Ammana
       </button>
